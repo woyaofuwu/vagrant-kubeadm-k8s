@@ -117,4 +117,4 @@ sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 # 重開機
-sudo systemctl reboot
+# sudo systemctl reboot
