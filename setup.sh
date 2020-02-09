@@ -20,6 +20,7 @@ sudo yum update -y
 
 # install some tools
 # sudo yum install -y vim telnet bind-utils wget
+sudo yum install -y bash-completion net-tools vim bind-utils
 
 # The centos-extras repository must be enabled. This repository is enabled by default.
 sudo yum-config-manager --enable centos-extras
@@ -114,7 +115,8 @@ sudo systemctl disable --now firewalld
 
 # 關閉 swap
 sudo swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+# sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo sed -i '/swap/d' /etc/fstab
 
 # 重開機
 # sudo systemctl reboot
